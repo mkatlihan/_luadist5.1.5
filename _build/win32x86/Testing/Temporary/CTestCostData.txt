@@ -1,0 +1,15 @@
+bisect 2 0.013
+cf 2 0.012
+echo 2 0.0115
+env 2 0.0125
+factorial 2 0.0135
+fib 2 0.017
+fibfor 2 0.0125
+hello 2 0.013
+life-quick 2 0.0195
+printf 2 0.00999999
+sieve 2 0.0155001
+sort 2 0.0115
+trace-calls 2 0.0115
+trace-globals 2 0.012
+---

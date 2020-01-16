@@ -1,0 +1,1 @@
+/usr/bin/cc   -m32 -fPIC -O3 -DNDEBUG    -m32 CMakeFiles/lua.dir/src/lua.c.o  -o ../../bin/linux32x86/lua -rdynamic ../../bin/linux32x86/liblua.so -lm -ldl -Wl,-rpath,/home/mka/opt/xscript/lua/luadist/5.1.5/bin/linux32x86: 

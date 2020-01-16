@@ -1,0 +1,300 @@
+Fri 04/12/2019 Begin build process 
+-- Setting build type to 'Release' as none was specified.
+-- The C compiler identification is MSVC 15.0.30729.1
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio 9.0/VC/bin/amd64/cl.exe
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio 9.0/VC/bin/amd64/cl.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Bit size not defined
+-- 64 bits compiler detected
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/opt/xscript/lua/luadist/5.1.5/_build/win64x86
+Scanning dependencies of target liblua
+[  1%] Building C object CMakeFiles/liblua.dir/src/lapi.c.obj
+lapi.c
+[  2%] Building C object CMakeFiles/liblua.dir/src/lcode.c.obj
+lcode.c
+[  4%] Building C object CMakeFiles/liblua.dir/src/ldebug.c.obj
+ldebug.c
+[  5%] Building C object CMakeFiles/liblua.dir/src/ldo.c.obj
+ldo.c
+[  6%] Building C object CMakeFiles/liblua.dir/src/ldump.c.obj
+ldump.c
+[  8%] Building C object CMakeFiles/liblua.dir/src/lfunc.c.obj
+lfunc.c
+[  9%] Building C object CMakeFiles/liblua.dir/src/lgc.c.obj
+lgc.c
+C:\opt\xscript\lua\luadist\5.1.5\src\lgc.c(288) : warning C4334: '<<' : result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+[ 11%] Building C object CMakeFiles/liblua.dir/src/llex.c.obj
+llex.c
+[ 12%] Building C object CMakeFiles/liblua.dir/src/lmem.c.obj
+lmem.c
+[ 13%] Building C object CMakeFiles/liblua.dir/src/lobject.c.obj
+lobject.c
+[ 15%] Building C object CMakeFiles/liblua.dir/src/lopcodes.c.obj
+lopcodes.c
+[ 16%] Building C object CMakeFiles/liblua.dir/src/lparser.c.obj
+lparser.c
+[ 18%] Building C object CMakeFiles/liblua.dir/src/lstate.c.obj
+lstate.c
+[ 19%] Building C object CMakeFiles/liblua.dir/src/lstring.c.obj
+lstring.c
+[ 20%] Building C object CMakeFiles/liblua.dir/src/ltable.c.obj
+ltable.c
+C:\opt\xscript\lua\luadist\5.1.5\src\ltable.c(323) : warning C4334: '<<' : result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\opt\xscript\lua\luadist\5.1.5\src\ltable.c(376) : warning C4334: '<<' : result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+[ 22%] Building C object CMakeFiles/liblua.dir/src/ltm.c.obj
+ltm.c
+[ 23%] Building C object CMakeFiles/liblua.dir/src/lundump.c.obj
+lundump.c
+[ 25%] Building C object CMakeFiles/liblua.dir/src/lvm.c.obj
+lvm.c
+[ 26%] Building C object CMakeFiles/liblua.dir/src/lzio.c.obj
+lzio.c
+[ 27%] Building C object CMakeFiles/liblua.dir/src/lauxlib.c.obj
+lauxlib.c
+[ 29%] Building C object CMakeFiles/liblua.dir/src/lbaselib.c.obj
+lbaselib.c
+[ 30%] Building C object CMakeFiles/liblua.dir/src/ldblib.c.obj
+ldblib.c
+[ 31%] Building C object CMakeFiles/liblua.dir/src/liolib.c.obj
+liolib.c
+[ 33%] Building C object CMakeFiles/liblua.dir/src/lmathlib.c.obj
+lmathlib.c
+[ 34%] Building C object CMakeFiles/liblua.dir/src/loslib.c.obj
+loslib.c
+[ 36%] Building C object CMakeFiles/liblua.dir/src/ltablib.c.obj
+ltablib.c
+[ 37%] Building C object CMakeFiles/liblua.dir/src/lstrlib.c.obj
+lstrlib.c
+[ 38%] Building C object CMakeFiles/liblua.dir/src/linit.c.obj
+linit.c
+[ 40%] Building C object CMakeFiles/liblua.dir/src/loadlib_rel.c.obj
+loadlib_rel.c
+[ 41%] Building RC object CMakeFiles/liblua.dir/src/lua_dll.rc.res
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+[ 43%] Linking C shared library ..\..\bin\win64x86\liblua.dll
+lapi.c.obj : warning LNK4197: export 'lua_checkstack' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_xmove' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_atpanic' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_newthread' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_gettop' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_settop' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_remove' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_insert' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_replace' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushvalue' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_type' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_typename' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_iscfunction' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_isnumber' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_isstring' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_isuserdata' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_rawequal' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_equal' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_lessthan' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_tonumber' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_tointeger' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_toboolean' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_tolstring' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_objlen' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_tocfunction' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_touserdata' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_tothread' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_topointer' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushnil' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushnumber' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushinteger' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushlstring' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushstring' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushvfstring' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushfstring' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushcclosure' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushboolean' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushlightuserdata' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pushthread' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_gettable' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_getfield' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_rawget' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_rawgeti' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_createtable' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_getmetatable' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_getfenv' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_settable' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_setfield' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_rawset' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_rawseti' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_setmetatable' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_setfenv' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_call' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_pcall' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_cpcall' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_load' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_dump' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_status' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_gc' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_error' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_next' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_concat' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_getallocf' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_setallocf' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_newuserdata' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_getupvalue' specified multiple times; using first specification
+lapi.c.obj : warning LNK4197: export 'lua_setupvalue' specified multiple times; using first specification
+ldebug.c.obj : warning LNK4197: export 'lua_sethook' specified multiple times; using first specification
+ldebug.c.obj : warning LNK4197: export 'lua_gethook' specified multiple times; using first specification
+ldebug.c.obj : warning LNK4197: export 'lua_gethookmask' specified multiple times; using first specification
+ldebug.c.obj : warning LNK4197: export 'lua_gethookcount' specified multiple times; using first specification
+ldebug.c.obj : warning LNK4197: export 'lua_getstack' specified multiple times; using first specification
+ldebug.c.obj : warning LNK4197: export 'lua_getlocal' specified multiple times; using first specification
+ldebug.c.obj : warning LNK4197: export 'lua_setlocal' specified multiple times; using first specification
+ldebug.c.obj : warning LNK4197: export 'lua_getinfo' specified multiple times; using first specification
+ldo.c.obj : warning LNK4197: export 'lua_resume' specified multiple times; using first specification
+ldo.c.obj : warning LNK4197: export 'lua_yield' specified multiple times; using first specification
+lstate.c.obj : warning LNK4197: export 'lua_newstate' specified multiple times; using first specification
+lstate.c.obj : warning LNK4197: export 'lua_close' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_argerror' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_error' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_typerror' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_where' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_checkoption' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_checklstring' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_optlstring' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_newmetatable' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_checkudata' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_checkstack' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_checktype' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_checkany' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_checknumber' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_optnumber' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_checkinteger' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_optinteger' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_getmetafield' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_callmeta' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_register' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_openlib' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_findtable' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_gsub' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_pushresult' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_addstring' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_addlstring' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_buffinit' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_prepbuffer' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_addvalue' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_ref' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_unref' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_loadfile' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_loadbuffer' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_loadstring' specified multiple times; using first specification
+lauxlib.c.obj : warning LNK4197: export 'luaL_newstate' specified multiple times; using first specification
+lbaselib.c.obj : warning LNK4197: export 'luaopen_base' specified multiple times; using first specification
+ldblib.c.obj : warning LNK4197: export 'luaopen_debug' specified multiple times; using first specification
+liolib.c.obj : warning LNK4197: export 'luaopen_io' specified multiple times; using first specification
+lmathlib.c.obj : warning LNK4197: export 'luaopen_math' specified multiple times; using first specification
+loslib.c.obj : warning LNK4197: export 'luaopen_os' specified multiple times; using first specification
+ltablib.c.obj : warning LNK4197: export 'luaopen_table' specified multiple times; using first specification
+lstrlib.c.obj : warning LNK4197: export 'luaopen_string' specified multiple times; using first specification
+linit.c.obj : warning LNK4197: export 'luaL_openlibs' specified multiple times; using first specification
+loadlib_rel.c.obj : warning LNK4197: export 'luaopen_package' specified multiple times; using first specification
+   Creating library ..\..\lib\win64x86\liblua.lib and object ..\..\lib\win64x86\liblua.exp
+'C:/opt/xscript/lua/luadist/5.1.5/bin/win64x86/liblua.dll' -> 'C:\dev\c\tabox\trunk/bin/win64x86/liblua.dll'
+[ 43%] Built target liblua
+Scanning dependencies of target liblua_static
+[ 44%] Building C object CMakeFiles/liblua_static.dir/src/lapi.c.obj
+lapi.c
+[ 45%] Building C object CMakeFiles/liblua_static.dir/src/lcode.c.obj
+lcode.c
+[ 47%] Building C object CMakeFiles/liblua_static.dir/src/ldebug.c.obj
+ldebug.c
+[ 48%] Building C object CMakeFiles/liblua_static.dir/src/ldo.c.obj
+ldo.c
+[ 50%] Building C object CMakeFiles/liblua_static.dir/src/ldump.c.obj
+ldump.c
+[ 51%] Building C object CMakeFiles/liblua_static.dir/src/lfunc.c.obj
+lfunc.c
+[ 52%] Building C object CMakeFiles/liblua_static.dir/src/lgc.c.obj
+lgc.c
+C:\opt\xscript\lua\luadist\5.1.5\src\lgc.c(288) : warning C4334: '<<' : result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+[ 54%] Building C object CMakeFiles/liblua_static.dir/src/llex.c.obj
+llex.c
+[ 55%] Building C object CMakeFiles/liblua_static.dir/src/lmem.c.obj
+lmem.c
+[ 56%] Building C object CMakeFiles/liblua_static.dir/src/lobject.c.obj
+lobject.c
+[ 58%] Building C object CMakeFiles/liblua_static.dir/src/lopcodes.c.obj
+lopcodes.c
+[ 59%] Building C object CMakeFiles/liblua_static.dir/src/lparser.c.obj
+lparser.c
+[ 61%] Building C object CMakeFiles/liblua_static.dir/src/lstate.c.obj
+lstate.c
+[ 62%] Building C object CMakeFiles/liblua_static.dir/src/lstring.c.obj
+lstring.c
+[ 63%] Building C object CMakeFiles/liblua_static.dir/src/ltable.c.obj
+ltable.c
+C:\opt\xscript\lua\luadist\5.1.5\src\ltable.c(323) : warning C4334: '<<' : result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\opt\xscript\lua\luadist\5.1.5\src\ltable.c(376) : warning C4334: '<<' : result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+[ 65%] Building C object CMakeFiles/liblua_static.dir/src/ltm.c.obj
+ltm.c
+[ 66%] Building C object CMakeFiles/liblua_static.dir/src/lundump.c.obj
+lundump.c
+[ 68%] Building C object CMakeFiles/liblua_static.dir/src/lvm.c.obj
+lvm.c
+[ 69%] Building C object CMakeFiles/liblua_static.dir/src/lzio.c.obj
+lzio.c
+[ 70%] Building C object CMakeFiles/liblua_static.dir/src/lauxlib.c.obj
+lauxlib.c
+[ 72%] Building C object CMakeFiles/liblua_static.dir/src/lbaselib.c.obj
+lbaselib.c
+[ 73%] Building C object CMakeFiles/liblua_static.dir/src/ldblib.c.obj
+ldblib.c
+[ 75%] Building C object CMakeFiles/liblua_static.dir/src/liolib.c.obj
+liolib.c
+[ 76%] Building C object CMakeFiles/liblua_static.dir/src/lmathlib.c.obj
+lmathlib.c
+[ 77%] Building C object CMakeFiles/liblua_static.dir/src/loslib.c.obj
+loslib.c
+[ 79%] Building C object CMakeFiles/liblua_static.dir/src/ltablib.c.obj
+ltablib.c
+[ 80%] Building C object CMakeFiles/liblua_static.dir/src/lstrlib.c.obj
+lstrlib.c
+[ 81%] Building C object CMakeFiles/liblua_static.dir/src/linit.c.obj
+linit.c
+[ 83%] Building C object CMakeFiles/liblua_static.dir/src/loadlib_rel.c.obj
+loadlib_rel.c
+[ 84%] Linking C static library ..\..\lib\win64x86\liblua_static.lib
+[ 84%] Built target liblua_static
+Scanning dependencies of target lua
+[ 86%] Building C object CMakeFiles/lua.dir/src/lua.c.obj
+lua.c
+[ 87%] Building RC object CMakeFiles/lua.dir/src/lua.rc.res
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+[ 88%] Linking C executable ..\..\bin\win64x86\lua.exe
+[ 88%] Built target lua
+Scanning dependencies of target wlua
+[ 90%] Building C object CMakeFiles/wlua.dir/src/wmain.c.obj
+wmain.c
+[ 91%] Building C object CMakeFiles/wlua.dir/src/lua.c.obj
+lua.c
+[ 93%] Building RC object CMakeFiles/wlua.dir/src/lua.rc.res
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+[ 94%] Linking C executable ..\..\bin\win64x86\wlua.exe
+[ 94%] Built target wlua
+Scanning dependencies of target luac
+[ 95%] Building C object CMakeFiles/luac.dir/src/luac.c.obj
+luac.c
+[ 97%] Building C object CMakeFiles/luac.dir/src/print.c.obj
+print.c
+[ 98%] Building RC object CMakeFiles/luac.dir/src/luac.rc.res
+Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+[100%] Linking C executable ..\..\bin\win64x86\luac.exe
+[100%] Built target luac
+Fri 04/12/2019 End build process 

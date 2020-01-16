@@ -1,0 +1,51 @@
+The system is: Windows - 6.0 - x86
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: d:/usr/Microsoft Visual Studio 9.0/VC/bin/cl.exe 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 15.00.30729.01 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 9.00.30729.01
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "H:/opt/xscript/lua/luadist/5.1.5/_build/win32x86/CMakeFiles/2.8.10.2/CompilerIdC/CMakeCCompilerId.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: H:/opt/xscript/lua/luadist/5.1.5/_build/win32x86/CMakeFiles/CMakeTmp
+
+Run Build Command:nmake /NOLOGO  "cmTryCompileExec1551853951\fast"
+	"d:\usr\Microsoft Visual Studio 9.0\VC\BIN\nmake.exe" -f CMakeFiles\cmTryCompileExec1551853951.dir\build.make /nologo -L                  CMakeFiles\cmTryCompileExec1551853951.dir\build
+	d:\usr\CMake\2.8\bin\cmake.exe -E cmake_progress_report H:\opt\xscript\lua\luadist\5.1.5\_build\win32x86\CMakeFiles\CMakeTmp\CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1551853951.dir/testCCompiler.c.obj
+	d:\usr\MICROS~1.0\VC\bin\cl.exe  @C:\Users\mka\AppData\Local\Temp\1\nm41A8.tmp
+testCCompiler.c
+Linking C executable cmTryCompileExec1551853951.exe
+	d:\usr\CMake\2.8\bin\cmake.exe -E vs_link_exe d:\usr\MICROS~1.0\VC\bin\cl.exe  /nologo @C:\Users\mka\AppData\Local\Temp\1\nm41F7.tmp
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: H:/opt/xscript/lua/luadist/5.1.5/_build/win32x86/CMakeFiles/CMakeTmp
+
+Run Build Command:nmake /NOLOGO  "cmTryCompileExec1931614080\fast"
+	"d:\usr\Microsoft Visual Studio 9.0\VC\BIN\nmake.exe" -f CMakeFiles\cmTryCompileExec1931614080.dir\build.make /nologo -L                  CMakeFiles\cmTryCompileExec1931614080.dir\build
+	d:\usr\CMake\2.8\bin\cmake.exe -E cmake_progress_report H:\opt\xscript\lua\luadist\5.1.5\_build\win32x86\CMakeFiles\CMakeTmp\CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1931614080.dir/CMakeCCompilerABI.c.obj
+	d:\usr\MICROS~1.0\VC\bin\cl.exe  @C:\Users\mka\AppData\Local\Temp\1\nm4456.tmp
+CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec1931614080.exe
+	d:\usr\CMake\2.8\bin\cmake.exe -E vs_link_exe d:\usr\MICROS~1.0\VC\bin\cl.exe  /nologo @C:\Users\mka\AppData\Local\Temp\1\nm44B5.tmp
+
+

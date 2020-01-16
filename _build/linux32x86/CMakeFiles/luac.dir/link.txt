@@ -1,0 +1,1 @@
+/usr/bin/cc   -m32 -fPIC -O3 -DNDEBUG    -m32 CMakeFiles/luac.dir/src/luac.c.o CMakeFiles/luac.dir/src/print.c.o  -o ../../bin/linux32x86/luac -rdynamic ../../lib/linux32x86/libliblua_static.a -lm -ldl -Wl,-rpath,:::::::::::::: 
