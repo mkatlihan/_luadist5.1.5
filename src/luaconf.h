@@ -45,6 +45,12 @@
 #endif
 
 
+#if defined(__ANDROID__)
+#define getlocaledecpoint()    ('.')
+#define LUA_USE_POSIX
+#define LUA_USE_DLOPEN        /* needs an extra library: -ldl */
+#define LUA_USE_LONGLONG    /* assume support for long long */
+#endif
 
 /*
 @@ LUA_USE_POSIX includes all functionallity listed as X/Open System
