@@ -16,7 +16,7 @@ project ( lua C )
 cmake_minimum_required ( VERSION 2.8 )
 include ( cmake/dist.cmake ) 
 include ( lua )
-set(CMAKE_INSTALL_PREFIX release )
+
 if(NOT DEFINED XBITS)
     MESSAGE(STATUS "Bit size not defined")   
     if( CMAKE_SIZEOF_VOID_P EQUAL 8 )
@@ -84,6 +84,8 @@ MESSAGE( "System Name     :" " ${CMAKE_SYSTEM_NAME}" )
 MESSAGE( "Platform        :" " ${XPLATFORM}" )
 MESSAGE( "Build Type      :" " ${CMAKE_BUILD_TYPE}" )
 
+set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/_release/${XPLATFORM} )
+
 ## CONFIGURATION
 # Default configuration (we assume POSIX by default)
 set ( LUA_PATH "LUA_PATH" CACHE STRING "Environment variable to use as package.path." )
@@ -136,6 +138,11 @@ else ( )
   option ( LUA_USE_POPEN "Use popen." ON )
   option ( LUA_USE_ULONGJMP "Use ulongjmp" ON )
 endif ( )
+
+#Additional customizations
+option( XOPT_LIBLUA "Use non-standard library name liblua." OFF)
+option( XOPT_COPY2TABOX "Copy shared library to TABOX binary folder." OFF)
+option( XOPT_OUTPUT_DIR "Change output directory." OFF)
 
 ## SETUP
 # Optional libraries
@@ -192,13 +199,15 @@ endif ( )
 # Generate luaconf.h
 configure_file ( src/luaconf.h.in ${CMAKE_CURRENT_BINARY_DIR}/luaconf.h )
 
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib/${XPLATFORM})
-if (UNIX)
-	set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/${XPLATFORM})
-else()
-	set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib/${XPLATFORM})
-endif()	
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/${XPLATFORM})
+if (XOPT_OUTPUT_DIR)
+	set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib/${XPLATFORM})
+	if (UNIX)
+		set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/${XPLATFORM})
+	else()
+		set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib/${XPLATFORM})
+	endif()	
+	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/${XPLATFORM})
+endif()
 
 # Sources and headers
 include_directories ( src ${CMAKE_CURRENT_BINARY_DIR} )
@@ -222,26 +231,32 @@ endif ( )
 add_library ( liblua SHARED ${SRC_LIB} ${LUA_DLL_RC} ${LUA_DEF} )
 target_link_libraries ( liblua ${LIBS} )
 if (LUA_WIN)
-	set_target_properties ( liblua PROPERTIES OUTPUT_NAME liblua CLEAN_DIRECT_OUTPUT 1 )
+	if (XOPT_LIBLUA)
+		set_target_properties ( liblua PROPERTIES OUTPUT_NAME liblua CLEAN_DIRECT_OUTPUT 1 )
+	else()
+		set_target_properties ( liblua PROPERTIES OUTPUT_NAME lua51 CLEAN_DIRECT_OUTPUT 1 )		
+	endif()
 else()
 	set_target_properties ( liblua PROPERTIES OUTPUT_NAME lua CLEAN_DIRECT_OUTPUT 1 )
 endif()
 if ( LUA_BUILD_AS_DLL )
   set_target_properties ( liblua PROPERTIES COMPILE_DEFINITIONS LUA_BUILD_AS_DLL )
 endif ( )
-# copy
-if (UNIX)
-    SET(ENV{TABOX_HOME}     "$ENV{HOME}/dev/c/tabox/trunk")
-    set_property(TARGET liblua APPEND_STRING PROPERTY LINK_FLAGS " -Wl,-rpath-link,'$ORIGIN' -Wl,-rpath,'$ORIGIN'")
-endif()	
-get_property(TARGET_LOCATION TARGET liblua PROPERTY LOCATION)
-ADD_CUSTOM_COMMAND(TARGET liblua POST_BUILD
-    COMMAND cp -puv "${TARGET_LOCATION}" "$ENV{TABOX_HOME}/bin/${XPLATFORM}"
-)
+
+if (XOPT_COPY2TABOX)
+	if (UNIX)
+	    SET(ENV{TABOX_HOME}     "$ENV{HOME}/dev/c/tabox/trunk")
+	    set_property(TARGET liblua APPEND_STRING PROPERTY LINK_FLAGS " -Wl,-rpath-link,'$ORIGIN' -Wl,-rpath,'$ORIGIN'")
+	endif()	
+	get_property(TARGET_LOCATION TARGET liblua PROPERTY LOCATION)
+	ADD_CUSTOM_COMMAND(TARGET liblua POST_BUILD
+	    COMMAND cp -puv "${TARGET_LOCATION}" "$ENV{TABOX_HOME}/bin/${XPLATFORM}"
+	)
+endif()
 
 # Create static library, this is needed to compile luac in the 5.1.x Lua series
-add_library ( liblua_static STATIC ${SRC_LIB} )
-target_link_libraries ( liblua_static ${LIBS} )
+add_library ( lua_static STATIC ${SRC_LIB} )
+target_link_libraries ( lua_static ${LIBS} )
 
 add_executable ( lua ${SRC_LUA} ${LUA_RC} )
 target_link_libraries ( lua liblua )
@@ -254,7 +269,7 @@ if ( LUA_BUILD_WLUA )
 endif ( )
 
 add_executable ( luac ${SRC_LUAC} ${LUAC_RC} )
-target_link_libraries ( luac liblua_static )
+target_link_libraries ( luac lua_static )
 
 install_executable ( lua luac )
 install_library ( liblua )
