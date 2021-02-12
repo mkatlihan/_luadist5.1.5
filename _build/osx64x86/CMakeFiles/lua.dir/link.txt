@@ -1,1 +1,0 @@
-/usr/bin/cc   -m64 -fPIC -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names   -m64 CMakeFiles/lua.dir/src/lua.c.o  -o ../../bin/osx64x86/lua  ../../bin/osx64x86/liblua.dylib /usr/lib/libm.dylib /usr/lib/libdl.dylib 
