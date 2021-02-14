@@ -84,7 +84,8 @@ MESSAGE( "System Name     :" " ${CMAKE_SYSTEM_NAME}" )
 MESSAGE( "Platform        :" " ${XPLATFORM}" )
 MESSAGE( "Build Type      :" " ${CMAKE_BUILD_TYPE}" )
 
-set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/_release/${XPLATFORM} )
+#set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/_release/${XPLATFORM} )
+set(CMAKE_INSTALL_PREFIX "/usr/local" )
 
 ## CONFIGURATION
 # Default configuration (we assume POSIX by default)
@@ -276,9 +277,9 @@ install_library ( liblua )
 install_data ( README.md COPYRIGHT HISTORY )
 install_lua_module ( strict etc/strict.lua )
 install_header ( src/lua.h src/lualib.h src/lauxlib.h etc/lua.hpp ${CMAKE_CURRENT_BINARY_DIR}/luaconf.h )
-install_doc ( doc/ )
-install_foo ( etc/ )
-install_test ( test/ )
+#install_doc ( doc/ )
+#install_foo ( etc/ )
+#install_test ( test/ )
 
 ## TESTS
 set ( LUA lua )
