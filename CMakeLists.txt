@@ -140,7 +140,7 @@ else ( )
   option ( LUA_USE_ULONGJMP "Use ulongjmp" ON )
   IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 	option ( LUA_USE_MACOSX "Use macosx." ON )
-	option ( LUA_USE_READLINE "Use readline." ON )	
+	option ( LUA_USE_READLINE "Use readline." ON )		
   ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")  
 endif ( )
 
@@ -151,7 +151,7 @@ option( XOPT_OUTPUT_DIR "Change output directory." OFF)
 
 ## SETUP
 # Optional libraries
-#find_package ( Readline )
+find_package ( Readline )
 if ( READLINE_FOUND )
   option ( LUA_USE_READLINE "Use readline in the Lua CLI." ON )
 endif ( )
@@ -248,10 +248,19 @@ if ( LUA_BUILD_AS_DLL )
   set_target_properties ( liblua PROPERTIES COMPILE_DEFINITIONS LUA_BUILD_AS_DLL )
 endif ( )
 
+IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")	
+	set_property(TARGET liblua APPEND_STRING PROPERTY LINK_FLAGS " -Wl,-rpath-link,'$ORIGIN' -Wl,-rpath,'$ORIGIN'")
+	#set_property(TARGET ${METAXESS_NAME} APPEND_STRING PROPERTY LINK_FLAGS " -ldl -static-intel")
+ELSEIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+	set_target_properties(liblua PROPERTIES BUILD_WITH_INSTALL_RPATH 1 INSTALL_NAME_DIR "@rpath")
+	set(CMAKE_MACOSX_RPATH 1)
+	set_property(TARGET liblua APPEND_STRING PROPERTY LINK_FLAGS " -single_module -framework IOkit -framework CoreFoundation -Xlinker -bind_at_load -dynamiclib" )
+ENDIF()
+
+
 if (XOPT_COPY2TABOX)
 	if (UNIX)
-	    SET(ENV{TABOX_HOME}     "$ENV{HOME}/dev/c/tabox/trunk")
-	    set_property(TARGET liblua APPEND_STRING PROPERTY LINK_FLAGS " -Wl,-rpath-link,'$ORIGIN' -Wl,-rpath,'$ORIGIN'")
+	    SET(ENV{TABOX_HOME}     "$ENV{HOME}/dev/c/tabox/trunk")	    
 	endif()	
 	get_property(TARGET_LOCATION TARGET liblua PROPERTY LOCATION)
 	ADD_CUSTOM_COMMAND(TARGET liblua POST_BUILD
