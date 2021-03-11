@@ -151,7 +151,7 @@ option( XOPT_OUTPUT_DIR "Change output directory." OFF)
 
 ## SETUP
 # Optional libraries
-find_package ( Readline )
+find_package ( readline )
 if ( READLINE_FOUND )
   option ( LUA_USE_READLINE "Use readline in the Lua CLI." ON )
 endif ( )
