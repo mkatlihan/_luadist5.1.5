@@ -138,6 +138,10 @@ else ( )
   option ( LUA_USE_ISATTY "Use tty." ON )
   option ( LUA_USE_POPEN "Use popen." ON )
   option ( LUA_USE_ULONGJMP "Use ulongjmp" ON )
+  IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+	option ( LUA_USE_MACOSX "Use macosx." ON )
+	option ( LUA_USE_READLINE "Use readline." ON )	
+  ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")  
 endif ( )
 
 #Additional customizations
