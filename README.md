@@ -1,3 +1,12 @@
+Lua 5.1.5 for LINDO API
+=======================
+
+Cloned from original distribution. No changes in Lua src code. 
+
+CMakefile.txt has been modified to accomodate LINDO and TABOX specific needs.
+
+Android support has also been added.
+
 README for Lua 5.1 [![Build Status](https://secure.travis-ci.org/LuaDist/lua.png?branch=lua-5.1)](http://travis-ci.org/LuaDist/lua)
 ==================
 
