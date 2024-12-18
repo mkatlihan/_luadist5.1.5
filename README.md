@@ -1,9 +1,9 @@
-Lua 5.1.5 for LINDO API
+Lua 5.1.5 for TABOX
 =======================
 
 Cloned from original distribution. No changes in Lua src code. 
 
-CMakefile.txt has been modified to accommodate LINDO and TABOX specific needs.
+CMakefile.txt has been modified to accommodate TABOX specific needs.
 
 Android support has also been added.
 
