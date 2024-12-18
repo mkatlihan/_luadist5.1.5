@@ -1,6 +1,9 @@
 #!/bin/bash
 #source /usr/Intel/Compiler/11.1/060/bin/iccvars.sh intel64
 LOGF=_logs/osx64arm.log
+if [ ! -d osx64arm ]; then
+    mkdir osx64arm
+fi
 rm -rf osx64arm/*  
 mv $LOGF $LOGF.bak
 cd osx64arm 
